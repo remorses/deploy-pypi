@@ -8,7 +8,7 @@ version: 2
 jobs:
     deploy:
         docker:
-            - image: xmorse/pypi-deploy
+            - image: xmorse/deploy-pypi
         environment:
             USERNAME: $PYPI_USERNAME
             PASSWORD: $PYPI_PASSWORD
@@ -21,7 +21,7 @@ jobs:
 ```yaml
 services:
     deploy:
-        image: xmorse/pypi-deploy
+        image: xmorse/deploy-pypi        
         command: sh -c "cd /src && /deploy"
         environment:
              USERNAME: xxx
