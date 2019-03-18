@@ -9,12 +9,9 @@ jobs:
     deploy:
         docker:
             - image: xmorse/deploy-pypi
-        environment:
-            USERNAME: $PYPI_USERNAME
-            PASSWORD: $PYPI_PASSWORD
         steps:
             - checkout
-            - run: /deploy
+            - run: USERNAME=$PYPI_USERNAME PASSWORD=$PYPI_PASSWORD /deploy
 ```
 
 ## Usage with docker-compose
