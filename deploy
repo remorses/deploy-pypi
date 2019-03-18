@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 test -f ./VERSION || (echo "file VERSION containing current version is needed" && exit 1)
 test -f ./setup.py || (echo "file setup.py is needed" && exit 1)
