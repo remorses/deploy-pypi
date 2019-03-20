@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 GIT_SSL_NO_VERIFY=1 git pull origin
 
 test -f ./VERSION || (echo "file VERSION containing current version is needed" && exit 1)
